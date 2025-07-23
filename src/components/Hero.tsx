@@ -16,12 +16,12 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-6">
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-              Empresas 4.0 es la oportunidad para que tu empresa avance
+              <span className="text-neon-green">Empresas 4.0</span> es la oportunidad para que tu empresa avance
             </h1>
             
             <p className="text-xl lg:text-2xl text-accent leading-relaxed">
-              Con este programa recibirás acompañamiento, formación y herramientas 
-              prácticas para impulsar la transformación digital de los negocios caleños.
+              Con este programa recibirás formación, asesorías y herramientas 
+              prácticas para impulsar la transformación digital de tu negocio.
             </p>
 
             <div className="pt-4">

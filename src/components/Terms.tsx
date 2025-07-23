@@ -4,10 +4,10 @@ import { Download, CheckCircle } from "lucide-react";
 const Terms = () => {
   const terms = [
     "El programa está dirigido a empresas ubicadas en Santiago de Cali",
-    "Participación gratuita en todas las fases del programa",
-    "Compromiso de asistencia a las sesiones programadas", 
-    "Disponibilidad para implementar las recomendaciones del diagnóstico",
-    "Autorización para el uso de datos con fines estadísticos del programa"
+    "Tu empresa debe estar registrada en la Cámara de Comercio de Cali",
+    "Debes contar con tu matrícula mercantil actualizada a 2025", 
+    "Debes realizar el Autodiagnóstico de madurez Digital",
+    "Compromiso del 100% asistencia a las sesiones programadas"
   ];
 
   return (

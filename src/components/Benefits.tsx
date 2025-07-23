@@ -8,7 +8,8 @@ import {
   Users, 
   UserCheck, 
   Settings, 
-  Map 
+  Map,
+  Calendar
 } from "lucide-react";
 
 const Benefits = () => {
@@ -17,7 +18,7 @@ const Benefits = () => {
   const benefits = [
     {
       icon: Search,
-      title: "Diagnóstico de madurez digital",
+      title: "Autodiagnóstico de madurez Digital",
       description: "Evaluación completa del estado actual de digitalización de tu empresa para identificar oportunidades de mejora."
     },
     {
@@ -27,18 +28,23 @@ const Benefits = () => {
     },
     {
       icon: UserCheck,
-      title: "Asesoría técnica personalizada", 
-      description: "Acompañamiento uno a uno adaptado a las necesidades específicas de tu empresa."
+      title: "Asesoría técnica especializada", 
+      description: "Acompañamiento uno a uno adaptado a una de las necesidades específicas de tu empresa."
     },
     {
       icon: Settings,
       title: "Herramienta digital estandarizada",
-      description: "Acceso a plataformas digitales con licenciamiento incluido para optimizar tus procesos."
+      description: "Acceso a una herramienta digital estandarizada con licenciamiento incluido para optimizar tus procesos."
     },
     {
       icon: Map,
       title: "Hoja de ruta personalizada",
       description: "Plan estratégico detallado para guiar la transformación digital de tu empresa paso a paso."
+    },
+    {
+      icon: Calendar,
+      title: "Invitación a participar en eventos",
+      description: "Tendrás la oportunidad de ser invitado a participar de los diferentes eventos para que puedas generar conexiones de valor."
     }
   ];
 
