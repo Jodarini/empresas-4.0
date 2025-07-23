@@ -1,11 +1,10 @@
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" }, 
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" }
+    { icon: Facebook, href: "https://www.facebook.com/DesarrolloEconomicoCali", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/DEconomicoCali", label: "Twitter" }, 
+    { icon: Instagram, href: "https://www.instagram.com/sececonomicocali/", label: "Instagram" }
   ];
 
   const quickLinks = [
@@ -24,45 +23,21 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo and Description */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Empresas 4.0</h3>
-            <p className="text-accent mb-6 leading-relaxed">
-              Programa de transformación digital para empresas caleñas, 
-              impulsado por la Alcaldía de Cali en alianza con la Cámara de Comercio.
-            </p>
-            
-            {/* Organization Logos */}
-            <div className="flex items-center space-x-6 mb-6">
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Organization Logos */}
+          <div>
+            <div className="flex items-center justify-center md:justify-start space-x-6 mb-6">
               <img 
-                src="/lovable-uploads/da0cc74b-e673-4f5a-b9ef-41a01b8c631c.png" 
+                src="/lovable-uploads/41092db7-19db-4bd0-9661-0e5bee8d3fdc.png" 
                 alt="Alcaldía de Santiago de Cali"
-                className="h-16 w-auto bg-white rounded-lg p-2"
+                className="h-20 w-auto bg-white rounded-lg p-2"
               />
               <img 
                 src="/lovable-uploads/c93a9607-038c-4a06-ba01-78e6bd3d289a.png" 
                 alt="Cámara de Comercio de Cali"
-                className="h-16 w-auto bg-white rounded-lg p-2"
+                className="h-20 w-auto bg-white rounded-lg p-2"
               />
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <button 
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-accent hover:text-white transition-colors duration-300"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact Info */}
@@ -71,11 +46,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span className="text-accent">info@empresas40.gov.co</span>
+                <span className="text-accent">transformatedigital@ccc.org.co</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent" />
-                <span className="text-accent">+57 (2) 123-4567</span>
+                <span className="text-accent">01 8000 512 734</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-1" />
@@ -95,10 +70,12 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-neon-green transition-colors duration-300"
+                  className="w-10 h-10 bg-neon-green rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-5 h-5 text-primary" />
                 </a>
               ))}
             </div>

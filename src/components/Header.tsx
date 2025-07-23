@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import empresasLogo from "@/assets/empresas40-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +23,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-accent/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -32,7 +31,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src={empresasLogo} 
+              src={isScrolled ? "/lovable-uploads/130a9f66-62a8-4c2e-aade-dd3d5d6f173d.png" : "/lovable-uploads/fe25efac-75b7-44da-b7cf-ca5fefb52b29.png"} 
               alt="Empresas 4.0" 
               className="h-10 w-auto"
             />
@@ -42,19 +41,31 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection("que-es")}
-              className="text-foreground hover:text-secondary font-medium transition-colors duration-300"
+              className={`font-medium transition-all duration-300 ${
+                isScrolled 
+                  ? "text-neon-green hover:text-primary hover:shadow-md" 
+                  : "text-white hover:text-neon-green"
+              }`}
             >
               ¿Qué es?
             </button>
             <button 
               onClick={() => scrollToSection("beneficios")}
-              className="text-foreground hover:text-secondary font-medium transition-colors duration-300"
+              className={`font-medium transition-all duration-300 ${
+                isScrolled 
+                  ? "text-neon-green hover:text-primary hover:shadow-md" 
+                  : "text-white hover:text-neon-green"
+              }`}
             >
               Beneficios
             </button>
             <button 
               onClick={() => scrollToSection("terminos")}
-              className="text-foreground hover:text-secondary font-medium transition-colors duration-300"
+              className={`font-medium transition-all duration-300 ${
+                isScrolled 
+                  ? "text-neon-green hover:text-primary hover:shadow-md" 
+                  : "text-white hover:text-neon-green"
+              }`}
             >
               Términos y condiciones
             </button>
