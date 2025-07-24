@@ -1,0 +1,1042 @@
+<style type="text/css">
+   .micrositio {
+      --main-bg: #0c0a5c;
+      --primary: #242052;
+      --light-bg: #f8f8fa;
+      --section-bg: #edf0fa;
+      --accent: #b6d82a;
+      --purple: #9f64f2;
+      --box-shadow-lg: 0 8px 32px 0 rgba(5, 9, 85, 0.13), 0 1.5px 3px 0 rgba(0, 0, 0, 0.03);
+      --box-shadow-md: 0 2px 12px rgba(39, 34, 109, 0.08);
+      --shadow-card: 0 3px 16px 0 rgba(18, 20, 56, 0.14);
+      font-family: 'Open Sans', Arial, sans-serif;
+      background: var(--main-bg);
+      color: #242052;
+   }
+
+   .micrositio * {
+      box-sizing: border-box;
+   }
+
+   .micrositio header,
+   .micrositio section,
+   .micrositio main {
+      width: 100%;
+   }
+
+   .micrositio .site-main {
+      width: 100%;
+      background: var(--main-bg);
+   }
+
+   .micrositio a:visited {
+      color: inherit;
+   }
+
+   .micrositio .navbar {
+      color: #FAFAFA !important;
+      background-color: #0c0a5c;
+   }
+
+   .micrositio .nav-link {
+      color: #FAFAFA !important;
+   }
+
+   .micrositio .nav-link:hover {
+      color: var(--accent) !important;
+   }
+
+   .micrositio .hero-btn {
+      color: #FAFAFA;
+   }
+
+   .micrositio .nav-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 32px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      outline: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s;
+   }
+
+
+   .micrositio .nav-btn:hover,
+   .micrositio .nav-btn:focus {
+      background-color: #c4ff00;
+      transform: scale(1.05);
+      color: #08085e !important;
+   }
+
+   /* --- HERO --- */
+   .micrositio .hero {
+      width: 100%;
+      background: var(--main-bg);
+      padding: 56px 0 120px 0;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+   }
+
+   .micrositio .hero-inner {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: start;
+      position: relative;
+      z-index: 2;
+      padding: 0 18px;
+   }
+
+   .micrositio .hero-bg-shape {
+      position: absolute;
+      left: 12%;
+      top: 49px;
+      width: 98px;
+      height: 98px;
+      background: none;
+      border: 2px solid rgba(112, 122, 236, 0.13);
+      border-radius: 12px;
+      z-index: 1;
+      display: none;
+   }
+
+   .micrositio .hero-content {
+      max-width: 525px;
+      z-index: 2;
+      margin-bottom: 30px;
+      margin-right: auto;
+   }
+
+   .micrositio .hero h1 {
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin: 0 0 12px 0;
+      color: #fff;
+   }
+
+   .micrositio .hero strong,
+   .micrositio .hero .hero-40 {
+      color: #b6d82a;
+      font-weight: bold;
+   }
+
+   .micrositio .hero .hero-desc {
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      margin-top: 9px;
+      max-width: 375px;
+   }
+
+   .micrositio .hero-btn {
+      background-color: #3c4ae2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 32px;
+      min-width: 282px;
+      min-height: 48px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      outline: none;
+      text-shadow: 0 1px 6px #6e69f24c;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s;
+   }
+
+   .micrositio .hero-btn:hover,
+   .micrositio .hero-btn:focus {
+      background-color: #c4ff00;
+      transform: scale(1.05);
+      color: #08085e;
+   }
+
+
+   .micrositio .hero-graphic {
+      width: 100%;
+   }
+
+   .micrositio .hero-graphic img {
+      border-radius: 1em;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+   }
+
+   /* Arrange hero in two columns on wider screens */
+   @media (min-width: 900px) {
+      .micrositio .hero {
+         padding: 78px 0 145px 0;
+         min-height: 440px;
+      }
+
+      .micrositio .hero-inner {
+         flex-direction: row;
+         gap: 60px;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 30px;
+      }
+
+      .micrositio .hero-content {
+         margin-bottom: 0;
+         margin-right: 0;
+         padding-top: 25px;
+         min-width: 450px;
+      }
+
+      .micrositio .hero-graphic {}
+
+      .micrositio .hero-bg-shape {
+         display: block;
+      }
+   }
+
+   /* --- Section Splits (white background) --- */
+   .micrositio .section-main {
+      background: #fff;
+      padding: 0;
+   }
+
+   .micrositio .section-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 14px 2rem 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   /* -- ¿Qué es...? box -- */
+   .micrositio .whatbox-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      margin-top: 1rem;
+      color: var(--primary);
+      line-height: initial;
+   }
+
+   .micrositio .whatbox {
+      background: #fff;
+      border-radius: 9px;
+      box-shadow: var(--box-shadow-md);
+      padding: 29px 29px 18px 29px;
+      font-size: 1rem;
+      color: #242052;
+      margin: 0 auto;
+      font-weight: 500;
+   }
+
+   /* --- BENEFICIOS section --- */
+   .micrositio .beneficios-title {
+      text-align: center;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 2rem;
+      margin-top: 3px;
+      margin-bottom: 1rem;
+      line-height: initial;
+   }
+
+   .micrositio .beneficios-subtitle {
+      font-size: 1rem;
+      color: #545572;
+      font-weight: 400;
+      margin: 0 0 15px 0;
+   }
+
+   .micrositio .beneficios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 100%;
+      max-width: 970px;
+      margin: 0 auto;
+   }
+
+   @media (min-width: 700px) {
+      .micrositio .beneficios-grid {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+
+   .micrositio .beneficio-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      min-height: 168px;
+      font-weight: 500;
+      transition: transform 0.16s, box-shadow 0.18s;
+      position: relative;
+      z-index: 1;
+   }
+
+   .micrositio .beneficio-icon {
+      background: #9f64f2;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.34rem;
+      font-weight: 800;
+      margin: 0 auto 17px auto;
+      box-shadow: 0 2px 8px rgba(162, 116, 249, 0.13);
+   }
+
+   .micrositio .beneficio-tit {
+      text-align: center;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      width: 100%;
+   }
+
+   .micrositio .beneficio-txt {
+      font-size: 0.99rem;
+      font-weight: 400;
+      color: #44455e;
+      margin: 0;
+   }
+
+   /* --- Términos y Condiciones --- */
+   .micrositio .section-terms {
+      background: var(--section-bg);
+      padding: 0;
+      min-height: 220px;
+   }
+
+   .micrositio .terms-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 44px 14px 74px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .micrositio .section-terms-title {
+      text-align: center;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      line-height: initial;
+   }
+
+   .micrositio .section-terms-sub {
+      font-size: 1rem;
+      color: #545572;
+      font-weight: 400;
+      margin: 0 0 28px 0;
+   }
+
+   .micrositio .terms-panel-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      background: #fff;
+      border-radius: 11px;
+      box-shadow: var(--box-shadow-md);
+      padding: 33px 23px 26px 32px;
+      justify-content: flex-start;
+   }
+
+   @media (min-width: 720px) {
+      .micrositio .terms-panel-wrap {
+         flex-direction: row;
+         gap: 27px;
+      }
+   }
+
+   .micrositio .terms-checklist-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+   }
+
+   .micrositio .terms-check-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: normal;
+   }
+
+   .micrositio .terms-list {
+      padding: 0;
+      margin: 0;
+   }
+
+   .micrositio .terms-list div {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+   }
+
+   .micrositio .terms-list svg {
+      color: #9f64f2;
+   }
+
+   .micrositio .terms-list li {
+      font-size: 1.016rem;
+      color: #242052;
+      font-weight: 500;
+      margin-bottom: 11px;
+   }
+
+   .micrositio .terms-list li:last-child {
+      margin-bottom: 0;
+   }
+
+   .micrositio .terms-list li::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2.5px solid var(--accent);
+      background: #fff;
+   }
+
+   .micrositio .terms-download-panel {
+      background: none;
+      padding: 0;
+      border-radius: 11px;
+      flex: 1 1 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .micrositio .terms-doc-icon {
+      background: var(--purple);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.66rem;
+      font-weight: 900;
+      margin: 0 0 19px 0;
+      box-shadow: 0 2px 8px rgba(162, 116, 249, 0.11);
+   }
+
+   .micrositio .terms-doc-title {
+      text-align: center;
+      color: var(--primary);
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 17px;
+      margin-top: 7px;
+      width: 100%;
+   }
+
+   .micrositio .terms-download-btn {
+      background-color: #9f64f2;
+      color: #fff !important;
+      border: none;
+      border-radius: 7px;
+      padding: 6px 22px;
+      min-width: 180px;
+      min-height: 44px;
+      font-size: 1rem;
+      box-shadow: 0 5px 28px 0 rgba(168, 151, 250, 0.15);
+      cursor: pointer;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+   }
+
+   .micrositio .terms-download-btn:hover,
+   .micrositio .terms-download-btn:focus {
+      background-color: #bb69ff;
+   }
+
+   /* --- FOOTER --- */
+   .micrositio footer.footer {
+      background: #0c0a5c;
+      color: #83a6e0;
+      width: 100%;
+      padding: 2rem;
+   }
+
+   .micrositio .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      gap: 28px;
+   }
+
+   .micrositio .footer-bottom {
+      display: flex;
+      font-size: 0.7rem !important;
+      justify-content: space-between;
+      border-top: 1px solid #afbff83e;
+      padding-top: 2em;
+      margin-top: 2em;
+      flex-direction: column;
+      gap: 1em;
+   }
+
+   .micrositio .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+   }
+
+
+   .micrositio .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+   }
+
+   .micrositio .footer-logo-ccc img {
+      height: 5em;
+      width: auto;
+      display: block;
+      background: #fff;
+      border-radius: 7px;
+      padding: 2px 6px;
+   }
+
+   .micrositio .footer-info {
+      color: #afbff8;
+   }
+
+   .micrositio .footer-info div {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+   }
+
+
+   .micrositio .footer-links a {
+      text-decoration: none;
+   }
+
+   .micrositio .footer-links a:visited {
+      color: inherit;
+   }
+
+   .micrositio .footer-links a:hover,
+   .micrositio .footer-links a:focus {
+      text-decoration: underline;
+   }
+
+   .micrositio .footer-social {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+   }
+
+   .micrositio .footer-social-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: #c4ff00;
+      color: #0c0a5c !important;
+      transition: background 0.18s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .micrositio .footer-social-icon:hover,
+   .micrositio .footer-social-icon:focus {
+      background: #3c4ae2;
+   }
+
+   .micrositio .footer-copy {
+      text-align: center;
+      color: #c9cbed;
+      font-size: 0.92rem;
+      margin-top: 23px;
+   }
+
+   @media (min-width: 720px) {
+      .micrositio .footer-inner {
+         flex-direction: row;
+         gap: 19px;
+         align-items: flex-start;
+         justify-content: space-between;
+      }
+
+      .micrositio .footer-bottom {
+         flex-direction: row;
+         align-items: center;
+      }
+
+      .micrositio .footer-links {
+         flex-direction: row;
+      }
+
+      .micrositio .terms-download-panel {
+         background: #fafafb;
+         padding: 33px 23px;
+      }
+
+      .micrositio .terms-doc-title {
+         text-align: center;
+      }
+
+   }
+
+
+
+   /* Responsive utility spacing */
+   @media (max-width: 670px) {
+
+      .micrositio .hero,
+      .micrositio .section-content,
+      .micrositio .terms-content,
+      .micrositio .footer-inner {
+         padding-left: 6px !important;
+         padding-right: 6px !important;
+         min-width: 0;
+      }
+
+      .micrositio .footer-logos img {
+         height: auto;
+         width: 100%;
+      }
+
+      .micrositio .hero-inner {
+         padding-left: 7px !important;
+         padding-right: 7px !important;
+      }
+
+      .micrositio .beneficios-grid {
+         gap: 12px !important;
+      }
+
+      .micrositio .beneficio-card {
+         padding: 1rem;
+      }
+   }
+</style>
+<div class="micrositio">
+
+   <!-- <nav class="navbar sticky-top navbar-expand-lg">
+      <a class="navbar-brand" href="#">Brand</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+               <a class="nav-link" href="#quees">¿Qué es? <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#beneficios">Beneficios</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#terminos">Terminos y condiciones</a>
+            </li>
+         </ul>
+         <a href="https://empresas40.transformaciondigital.com.co/">INSCRÍBETE AQUÍ</a>
+      </div>
+   </nav> -->
+   <nav class="navbar sticky-top navbar-light navbar-expand-md bg-faded justify-content-center">
+      <a href="/" class="navbar-brand d-flex w-50 mr-auto">Empresas 4.0</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+         <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item">
+               <a class="nav-link" href="#quees">¿Qué es?</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#beneficios">Beneficios</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#terminos">Términos y condiciones</a>
+            </li>
+         </ul>
+         <ul class="nav navbar-nav ml-auto w-100 justify-content-end" style="width:99% !important;">
+            <li class="nav-item">
+               <a href="https://empresas40.transformaciondigital.com.co/" class="nav-btn">INSCRÍBETE AQUÍ</a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+
+   <main class="site-main">
+
+      <!-- HERO -->
+      <section class="hero">
+         <div class="hero-bg-shape"></div>
+         <div class="hero-inner">
+            <div class="hero-content">
+               <h1>
+                  <strong>Empresas <span class="hero-40">4.0</span></strong> es la oportunidad para que tu empresa
+                  avance
+               </h1>
+               <div class="hero-desc">
+                  Con este programa recibirás formación, asesorías y herramientas prácticas para impulsar la
+                  transformación digital de tu negocio.
+               </div>
+               <button class="hero-btn">Inscríbete aquí y recibe tu diagnóstico gratuito</button>
+            </div>
+            <div class="hero-graphic">
+               <!-- Replace src with your own image -->
+               <img src="https://www.cali.gov.co/info/caligovco_se/media/galeria326150.jpg" alt="BUSINESS TECHNOLOGY"
+                  draggable="false" />
+            </div>
+         </div>
+      </section>
+
+      <!-- ¿Qué es Empresas 4.0? -->
+      <section class="section-main" id="quees">
+         <div class="section-content">
+            <div class="whatbox-title">¿Qué es Empresas 4.0?</div>
+            <div class="whatbox">
+               Es un programa liderado por <strong>Alcaldía de Santiago de Cali </strong>a través de la
+               <strong>Secretaría de Desarrollo
+                  Económico </strong>en alianza con la <strong>Cámara de Comercio de Cali, </strong>que busca cerrar
+               brechas tecnológicas a los empresarios caleños con formación grupal, asesoría especializada y el uso de
+               herramientas digitales.
+            </div>
+         </div>
+      </section>
+
+      <!-- Beneficios del Programa -->
+      <section class="section-main" id="beneficios">
+         <div class="section-content" style="padding-bottom: 54px;">
+            <div class="beneficios-title">Beneficios del Programa</div>
+            <div class="beneficios-subtitle">Todo lo que tu empresa necesita para su transformación digital</div>
+            <div class="beneficios-grid">
+               <div class="beneficio-card">
+                  <span class="beneficio-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search w-8 h-8 text-white">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                     </svg>
+                  </span>
+                  <div class="beneficio-tit">Autodiagnóstico de madurez Digital</div>
+                  <div class="beneficio-txt">
+                     Evaluación completa del estado actual de digitalización de tu empresa para identificar
+                     oportunidades de mejora.
+                  </div>
+               </div>
+               <div class="beneficio-card">
+                  <span class="beneficio-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users w-8 h-8 text-white">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                     </svg>
+                  </span>
+                  <div class="beneficio-tit">Asesoría grupal especializada</div>
+                  <div class="beneficio-txt">
+                     Asesorías y consultorías grupales alineadas con la transformación digital y el uso de TIC.
+                  </div>
+               </div>
+               <div class="beneficio-card">
+                  <span class="beneficio-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user-check w-8 h-8 text-white">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <polyline points="16 11 18 13 22 9"></polyline>
+                     </svg>
+                  </span>
+                  <div class="beneficio-tit">Asesoría técnica avanzada</div>
+                  <div class="beneficio-txt">Acompañamiento uno a uno adaptado a una de las necesidades específicas de
+                     tu empresa.</div>
+               </div>
+               <div class="beneficio-card">
+                  <span class="beneficio-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-settings w-8 h-8 text-white">
+                        <path
+                           d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                        </path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                     </svg>
+                  </span>
+                  <div class="beneficio-tit">Herramienta digital estandarizada</div>
+                  <div class="beneficio-txt">Acceso a una herramienta digital estandarizada con licenciamiento incluido
+                     para optimizar tus procesos.</div>
+               </div>
+               <div class="beneficio-card">
+
+                  <span class="beneficio-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map w-8 h-8 text-white">
+                        <path
+                           d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z">
+                        </path>
+                        <path d="M15 5.764v15"></path>
+                        <path d="M9 3.236v15"></path>
+                     </svg>
+                  </span>
+                  <div class="beneficio-tit">Hoja de ruta personalizada</div>
+                  <div class="beneficio-txt">Plan estratégico detallado para guiar la transformación digital de tu
+                     empresa paso a paso.</div>
+               </div>
+               <div class="beneficio-card">
+                  <span class="beneficio-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar w-8 h-8 text-white">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                     </svg>
+                  </span>
+                  <div class="beneficio-tit">Invitación a participar en eventos</div>
+                  <div class="beneficio-txt">Tendrás la oportunidad de ser invitado a participar de los diferentes
+                     eventos para que puedas generar conexiones de valor.</div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Términos y Condiciones -->
+      <section class="section-terms" id="terminos">
+         <div class="terms-content">
+            <div class="section-terms-title">Términos y Condiciones</div>
+            <div class="section-terms-sub">
+               Conoce los requisitos y pasos para participar en Empresas 4.0
+            </div>
+            <div class="terms-panel-wrap">
+               <div class="terms-checklist-panel">
+                  <div class="terms-check-title">Requisitos de Participación</div>
+                  <div class="terms-list">
+                     <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big w-6 h-6 text-neon-green flex-shrink-0 mt-0.5">
+                           <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                           <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <p>
+                           El programa está dirigido a empresas ubicadas en Santiago de Cali
+
+                        </p>
+                     </div>
+                     <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big w-6 h-6 text-neon-green flex-shrink-0 mt-0.5">
+                           <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                           <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <p>
+
+                           Tu empresa debe estar registrada en la Cámara de Comercio de Cali
+                        </p>
+                     </div>
+                     <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big w-6 h-6 text-neon-green flex-shrink-0 mt-0.5">
+                           <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                           <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <p>
+
+                           Debes contar con tu matrícula mercantil actualizada a 2025
+                        </p>
+                     </div>
+                     <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big w-6 h-6 text-neon-green flex-shrink-0 mt-0.5">
+                           <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                           <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <p>
+
+                           Debes realizar el Autodiagnóstico de madurez Digital
+                        </p>
+                     </div>
+                     <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big w-6 h-6 text-neon-green flex-shrink-0 mt-0.5">
+                           <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                           <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <p>
+                           Compromiso del 100% asistencia a las sesiones programadas
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="terms-download-panel">
+                  <span class="terms-doc-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-download w-10 h-10 text-white">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" x2="12" y1="15" y2="3"></line>
+                     </svg>
+                  </span>
+                  <div class="terms-doc-title">Documento Completo</div>
+                  <p>Descarga el documento completo con todos los términos y condiciones del programa</p>
+                  <a href="#" class="terms-download-btn" download>Descargar términos y condiciones</a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- FOOTER -->
+   <footer class="footer">
+      <div class="footer-inner">
+         <div>
+            <div class="footer-logos">
+               <div class="footer-logo-ccc">
+                  <img src="https://www.cali.gov.co/info/caligovco_se/media/galeria326163.jpg"
+                     alt="Secretaría de Desarrollo Económico" />
+               </div>
+               <div class="footer-logo-ccc">
+                  <!-- Replace src with your own logo if available -->
+                  <img src="https://www.cali.gov.co/info/caligovco_se/media/galeria326152.png"
+                     alt="Cámara de Comercio de Cali" />
+               </div>
+            </div>
+         </div>
+         <div>
+            <div class="footer-info">
+               <p style="color: #FAFAFA !important; margin-bottom: 1rem; font-weight: bold;">Contacto</p>
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-mail w-5 h-5 text-accent">
+                     <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <p>
+                     transformatedigital@ccc.org.co
+                  </p>
+               </div>
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-phone w-5 h-5 text-accent">
+                     <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                     </path>
+                  </svg>
+                  <p>
+                     01 8000 512 734
+                  </p>
+               </div>
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-map-pin w-5 h-5 text-accent mt-1">
+                     <path
+                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                     </path>
+                     <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <p>
+                     Santiago de Cali, Valle del Cauca
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <hr>
+
+      <div class="footer-bottom">
+         <div class="footer-social">
+            <p style="margin: 0 !important;">Síguenos: </p>
+            <a href="https://www.facebook.com/DesarrolloEconomicoCali" class="footer-social-icon"
+               aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-facebook w-5 h-5 ">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+               </svg></a>
+            <a href="https://x.com/DEconomicoCali" class="footer-social-icon" aria-label="Twitter"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-twitter w-5 h-5 ">
+                  <path
+                     d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                  </path>
+               </svg></a>
+            <a href="https://www.instagram.com/sececonomicocali/" class="footer-social-icon" aria-label="Instagram"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-instagram w-5 h-5 ">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+               </svg></a>
+         </div>
+         <div class="footer-links">
+            <a href="https://www.cali.gov.co/tic/publicaciones/171934/politica-de-tratamiento-de-datos-personales/">Política
+               de Datos - Alcaldía</a>
+            <a href="https://www.ccc.org.co/politicas/politica-datos/">Política de Datos - CCC</a>
+
+            <div>
+               © 2024 Empresas 4.0 - Todos los derechos reservados
+            </div>
+         </div>
+      </div>
+
+   </footer>
+</div>
